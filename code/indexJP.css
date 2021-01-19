@@ -1,0 +1,987 @@
+/*Loading*/
+
+.loading-container {
+    height: 100vh;
+    /* Image is centered vertically and horizontally at all times */
+    background-position: center center;
+    /* Image doesn't repeat */
+    background-repeat: no-repeat;
+    /* Makes the image fixed in the viewport so that it doesn't move when 
+	     the content height is greater than the image height */
+    background-attachment: fixed;
+    /* This is what makes the background image rescale based on its container's size */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.cssload-loader {
+    width: 600px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 900;
+    font-size: 42px;
+    color: #C6A45D;
+    letter-spacing: 0.2em;
+}
+
+.cssload-loader::before,
+.cssload-loader::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #C6A45D;
+    position: absolute;
+    animation: cssload-load 1.50s infinite alternate ease-in-out;
+    -o-animation: cssload-load 1.50s infinite alternate ease-in-out;
+    -ms-animation: cssload-load 1.50s infinite alternate ease-in-out;
+    -webkit-animation: cssload-load 1.50s infinite alternate ease-in-out;
+    -moz-animation: cssload-load 1.50s infinite alternate ease-in-out;
+}
+
+.cssload-loader::before {
+    top: 0;
+}
+
+.cssload-loader::after {
+    bottom: 0;
+}
+
+@keyframes cssload-load {
+    0% {
+        left: 0;
+        height: 29px;
+        width: 15px;
+    }
+    50% {
+        height: 8px;
+        width: 39px;
+    }
+    100% {
+        left: 590px;
+        height: 29px;
+        width: 15px;
+    }
+}
+
+@-o-keyframes cssload-load {
+    0% {
+        left: 0;
+        height: 29px;
+        width: 15px;
+    }
+    50% {
+        height: 8px;
+        width: 39px;
+    }
+    100% {
+        left: 590px;
+        height: 29px;
+        width: 15px;
+    }
+}
+
+@-ms-keyframes cssload-load {
+    0% {
+        left: 0;
+        height: 29px;
+        width: 15px;
+    }
+    50% {
+        height: 8px;
+        width: 39px;
+    }
+    100% {
+        left: 590px;
+        height: 29px;
+        width: 15px;
+    }
+}
+
+@-webkit-keyframes cssload-load {
+    0% {
+        left: 0;
+        height: 29px;
+        width: 15px;
+    }
+    50% {
+        height: 8px;
+        width: 39px;
+    }
+    100% {
+        left: 590px;
+        height: 29px;
+        width: 15px;
+    }
+}
+
+@-moz-keyframes cssload-load {
+    0% {
+        left: 0;
+        height: 29px;
+        width: 15px;
+    }
+    50% {
+        height: 8px;
+        width: 39px;
+    }
+    100% {
+        left: 590px;
+        height: 29px;
+        width: 15px;
+    }
+}
+
+
+/* For mobile devices */
+
+@media only screen and (max-width: 612px) {
+    .cssload-loader {
+        width: 300px;
+        font-size: 20px;
+    }
+    @keyframes cssload-load {
+        0% {
+            left: 0;
+            height: 29px;
+            width: 15px;
+        }
+        50% {
+            height: 8px;
+            width: 39px;
+        }
+        100% {
+            left: 290px;
+            height: 29px;
+            width: 15px;
+        }
+    }
+    @-o-keyframes cssload-load {
+        0% {
+            left: 0;
+            height: 29px;
+            width: 15px;
+        }
+        50% {
+            height: 8px;
+            width: 39px;
+        }
+        100% {
+            left: 290px;
+            height: 29px;
+            width: 15px;
+        }
+    }
+    @-ms-keyframes cssload-load {
+        0% {
+            left: 0;
+            height: 29px;
+            width: 15px;
+        }
+        50% {
+            height: 8px;
+            width: 39px;
+        }
+        100% {
+            left: 290px;
+            height: 29px;
+            width: 15px;
+        }
+    }
+    @-webkit-keyframes cssload-load {
+        0% {
+            left: 0;
+            height: 29px;
+            width: 15px;
+        }
+        50% {
+            height: 8px;
+            width: 39px;
+        }
+        100% {
+            left: 290px;
+            height: 29px;
+            width: 15px;
+        }
+    }
+    @-moz-keyframes cssload-load {
+        0% {
+            left: 0;
+            height: 29px;
+            width: 15px;
+        }
+        50% {
+            height: 8px;
+            width: 39px;
+        }
+        100% {
+            left: 290px;
+            height: 29px;
+            width: 15px;
+        }
+    }
+}
+
+
+/*END OF LOADING*/
+
+header {
+    background-image: url('background.jpg');
+    /* Image is centered vertically and horizontally at all times */
+    background-position: center center;
+    /* Image doesn't repeat */
+    background-repeat: no-repeat;
+    /* Makes the image fixed in the viewport so that it doesn't move when 
+	     the content height is greater than the image height */
+    background-attachment: fixed;
+    /* This is what makes the background image rescale based on its container's size */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* Pick a solid background color that will be displayed while the background image is loading */
+    background-color: #464646;
+    /* SHORTHAND CSS NOTATION
+	   * background: url(background-photo.jpg) center center cover no-repeat fixed;
+	   */
+    height: 100vh;
+    transition: background 1s linear;
+}
+
+
+/* For mobile devices */
+
+@media only screen and (max-width: 767px) {
+    header {
+        height: 400px;
+        background-attachment: scroll;
+    }
+    #myBtn {
+        display: none !important;
+    }
+}
+
+.language-icon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.language-icon img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+
+/*NAVIGATOR*/
+
+nav {
+    background-color: #1D2115;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 32px;
+    transition: font-size 1s ease-out;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: #C6A45D;
+    transition: color .5s ease-out;
+}
+
+nav ul li a:hover,
+.is-active {
+    color: white!important;
+    text-decoration: none;
+}
+
+nav ul li a:focus {
+    color: #C6A45D;
+    text-decoration: none;
+}
+
+nav ul {
+    text-align: right;
+    float: right;
+    display: inline-block;
+}
+
+nav .wild-text {
+    color: #C6A45D;
+    font-size: 20px;
+    margin-top: 8px;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: -500px;
+    transition: margin-left 1s cubic-bezier(.5, -0.5, .5, 1.6);
+}
+
+.fixed {
+    z-index: 100;
+    position: sticky;
+    -webkit-position: sticky;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    min-width: 100%;
+    opacity: .70;
+    transition: opacity 1s ease-out, height 1s ease-out;
+}
+
+.fixed ul li {
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    nav ul {
+        text-align: center;
+    }
+    nav ul li {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 8px;
+    }
+    nav ul li a {
+        font-weight: bolder;
+    }
+}
+
+
+/*INFORMATION*/
+
+.information-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.information-container img {
+    width: 100%;
+    height: auto
+}
+
+.information-container .each-infor img {
+    width: 32px;
+    height: auto;
+    margin-left: 10px;
+    margin-top: -3px;
+}
+
+.information-container .each-infor a {
+    color: #2b6dad;
+}
+
+.information-container .author-name {
+    font-size: 70px;
+    word-spacing: 20px;
+    width: auto;
+    display: inline-block;
+    background-color: white;
+    padding: 0px 35px;
+}
+
+.information-container .name-line {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #333;
+    margin-top: -24px;
+    margin-bottom: 55px;
+}
+
+@media only screen and (max-width: 767px) {
+    .information-container .author-name {
+        font-size: 32px;
+        padding: 0px 15px;
+        word-spacing: 6px;
+    }
+    .information-container .name-line {
+        height: 3px;
+        margin-top: -10px;
+        margin-bottom: 25px;
+    }
+}
+
+.information-container .name {
+    background-color: white;
+    position: absolute;
+    top: 30px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.infor-name {
+    display: flex;
+}
+
+.infor-name img {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+}
+
+.infor-name .summary {
+    font-size: 26px;
+    color: #1D2115;
+    display: flex;
+    line-height: 1.2;
+    align-items: center;
+    /* align vertical */
+}
+
+.infor-name .infor {
+    display: flex;
+    align-items: center;
+    /* align vertical */
+}
+
+.infor-name .contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* align vertical */
+    text-align: right;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.contact .each-infor {
+    font-size: 20px;
+    flex-basis: 100%;
+}
+
+.fa {
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 480px) {
+    .infor-name {
+        display: block;
+    }
+    .infor-name .summary {
+        margin-bottom: 25px;
+    }
+}
+
+
+/*SKILL CONTAINER*/
+
+.skill-container {
+    background-color: #1D2115
+}
+
+.skill-header {
+    margin-top: 60px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 52px;
+    font-weight: bold;
+    color: #C6A45D
+}
+
+.skill-container .line {
+    height: 4px;
+    width: 90px;
+    margin: auto;
+    margin-bottom: 50px;
+    border-radius: 1px;
+    background-color: #C6A45D;
+}
+
+.each-skill p {
+    display: inline;
+}
+
+.skill-title {
+    margin-top: 10px;
+    margin-bottom: 60px;
+    font-size: 25px;
+    color: #C6A45D;
+    font-family: contentFont;
+}
+
+@media screen and (max-width: 480px) {
+    .c100.big {
+        font-size: 120px;
+    }
+    .each-skill p {
+        color: black;
+    }
+    .skill-title {
+        margin-bottom: 40px;
+        font-size: 24px;
+    }
+    [class*="col-"] {
+        padding: 0px;
+    }
+}
+
+
+/*EXPERIENCE CONTAINER*/
+
+.experience-container {
+    padding-top: 60px;
+}
+
+.experience-header {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 52px;
+    font-weight: bold;
+    color: #1D2115;
+}
+
+.experience-container .line {
+    height: 4px;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 50px;
+    border-radius: 1px;
+    background-color: #1D2115;
+}
+
+.cd-timeline-content h2 {
+    font-size: 31px;
+}
+
+.cd-timeline-content p {
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+@media only screen and (max-width: 767px) {
+    .cd-timeline-content p {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+}
+
+.cd-timeline-content .cd-date {
+    font-size: 20px;
+}
+
+.cd-timeline-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.responsive-title {
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.timeline-description {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+
+/*FOOTER*/
+
+
+/*FOOTER*/
+
+footer {
+    /* Location of the image */
+    background-image: url('footer-background.jpg');
+    /* Image is centered vertically and horizontally at all times */
+    background-position: center center;
+    /* Image doesn't repeat */
+    background-repeat: no-repeat;
+    /* Makes the image fixed in the viewport so that it doesn't move when 
+	     the content height is greater than the image height */
+    background-attachment: fixed;
+    /* This is what makes the background image rescale based on its container's size */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* Pick a solid background color that will be displayed while the background image is loading */
+    background-color: #464646;
+    /* SHORTHAND CSS NOTATION
+   * background: url(background-photo.jpg) center center cover no-repeat fixed;
+   */
+    height: 500px;
+}
+
+footer .author-name {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+}
+
+footer .line {
+    height: 1px;
+    background-color: #6c6d6f;
+    width: 100%;
+    border-radius: 2px;
+    margin: auto;
+}
+
+footer .bottom-line {
+    height: 1px;
+    background-color: #6c6d6f;
+    width: 100%;
+    border-radius: 2px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+footer .contact-infor {
+    color: white;
+    font-size: 20px;
+}
+
+footer .each-infor {
+    padding-top: 60px;
+}
+
+footer .each-infor:hover>.title,
+footer .each-infor:hover>.content {
+    color: #C6A45D;
+}
+
+footer .each-infor .title {
+    padding-top: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #eae9e9;
+}
+
+footer .each-infor .content {
+    padding-top: 20px;
+    font-size: 20px;
+    color: #d0cccc;
+}
+
+footer .slogan {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer .slogan1,
+footer .slogan2 {
+    display: inline;
+    color: #eae9e9;
+    font-size: 23px;
+}
+
+
+/* For mobile devices */
+
+@media only screen and (max-width: 767px) {
+    footer {
+        /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections */
+        background-attachment: scroll;
+        height: 100%;
+    }
+    footer .author-name {
+        padding-top: 70px;
+        padding-bottom: 20px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    footer .bottom-line {
+        margin-top: 40px;
+    }
+    footer .slogan1,
+    footer .slogan2 {
+        font-size: 16px;
+        display: block;
+    }
+}
+
+
+/* For mobile devices */
+
+@media screen and (min-width: 401px) and (max-width: 768px) {
+    footer {
+        /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections */
+        background-attachment: scroll;
+        height: 100%;
+    }
+    footer .author-name {
+        padding-top: 70px;
+        padding-bottom: 20px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    footer .bottom-line {
+        margin-top: 40px;
+    }
+    footer .slogan1,
+    footer .slogan2 {
+        font-size: 16px;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    footer {
+        /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections */
+        background-attachment: scroll;
+        height: 100%;
+    }
+    footer .contact-infor {
+        font-size: 22px!important;
+    }
+    footer .author-name {
+        padding-top: 70px;
+        padding-bottom: 20px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    footer .bottom-line {
+        margin-top: 40px;
+    }
+    footer .slogan {
+        font-size: 16px;
+    }
+}
+
+
+/*FONT*/
+
+.title-font {
+    font-family: SawarabiGothic;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: SawarabiGothic;
+    src: url('SFProJP_semibold.woff2');
+}
+
+
+/* @font-face {
+    font-family: NotoSansJP-Regular;
+    src: url('../fonts/SFProJP_regular.woff2');
+} */
+
+.content-font {
+    font-family: "NotoSansJP-Regular";
+    font-size: 30px;
+}
+
+@font-face {
+    font-family: NotoSansJP-Regular;
+    src: url('SFProJP_regular.woff2');
+}
+
+
+/* @font-face {
+    font-family: NotoSansJP-Regular;
+    src: url('../fonts/SFProJP_regular.woff2');
+} */
+
+
+/*MODAL*/
+
+.modal-dialog {
+    max-width: 360px;
+}
+
+
+/*LOADING GIF*/
+
+
+/* Paste this css to your style sheet file or under head tag */
+
+
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+
+.no-js #loader {
+    display: none;
+}
+
+.js #loader {
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: #1D2115;
+}
+
+
+/*TOP BUTTON*/
+
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    background: url(icon-top-arrow.png);
+    border: none;
+    width: 32px;
+    height: 32px;
+    transition: background .5s ease-out
+}
+
+#myBtn:hover {
+    background: url(icon-top-arrow-gold.png);
+}
+
+#myBtn:focus {
+    outline: 0;
+}
+
+.each-infor .mail-icon {
+    background-image: url('mail-icon.png');
+    width: 64px;
+    height: 64px;
+    margin: auto;
+    transition: background-image .5s ease-out;
+}
+
+.mail-infor:hover>.mail-icon {
+    background-image: url('mail-icon-gold.png');
+}
+
+.each-infor .phone-icon {
+    background-image: url('phone-icon.png');
+    width: 64px;
+    height: 64px;
+    margin: auto;
+    transition: background-image .5s ease-out;
+}
+
+.phone-infor:hover>.phone-icon {
+    background-image: url('phone-icon-gold.png');
+}
+
+.each-infor .map-icon {
+    background-image: url('map-icon.png');
+    width: 64px;
+    height: 64px;
+    margin: auto;
+    transition: background-image .5s ease-out;
+}
+
+.map-infor:hover>.map-icon {
+    background-image: url('map-icon-gold.png');
+}
+
+.section01 {
+    position: relative;
+    width: 100%;
+}
+
+.section01 .scroll-down {
+    position: absolute;
+    bottom: 85px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    font: normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+}
+
+.section01 .scroll-down:hover {
+    opacity: .5;
+}
+
+.section01 span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb07 2s infinite;
+    animation: sdb07 2s infinite;
+    opacity: 0;
+    box-sizing: border-box;
+}
+
+.section01 .scroll-down span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.section01 .scroll-down span:nth-of-type(2) {
+    top: 16px;
+    -webkit-animation-delay: .15s;
+    animation-delay: .15s;
+}
+
+.section01 .scroll-down span:nth-of-type(3) {
+    top: 32px;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+}
+
+@-webkit-keyframes sdb07 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes sdb07 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

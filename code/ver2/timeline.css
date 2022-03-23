@@ -144,6 +144,13 @@ h2 {
     margin-top: -12px;
 }
 
+.cd-picture-custom img {
+    width: 65px;
+    height: 65px;
+    left: 17%;
+    top: 17%;
+}
+
 .cd-timeline-img.cd-picture {
     background: #1D2115;
     ;
@@ -315,7 +322,7 @@ h2 {
 @media only screen and (min-width: 768px) {
     .cd-timeline-content h2 {
         font-size: 20px;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
     .cd-timeline-content p {
         font-size: 16px;

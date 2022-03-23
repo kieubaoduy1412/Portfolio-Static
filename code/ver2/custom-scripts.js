@@ -37,10 +37,9 @@
             $(".cssload-loader").fadeOut("slow");
             $(".loading-container").css('display', 'none');
             $("body").addClass("show-on");
-            console.log($("body").scrollTop())
             window.scrollTo(0, 0);
         };
-        window.setTimeout(show_popup, 2500);
+        window.setTimeout(show_popup, 2800);
     });
     /* Loader Code End */
 

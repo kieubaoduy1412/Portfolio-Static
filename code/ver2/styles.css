@@ -1641,7 +1641,7 @@ h6 {
 }
 
 .mh-home .mh-header-info .social-icon li .fa {
-    background-color: #1e1e25;
+    background-color: #0bceaf;
     font-size: 18px;
     line-height: 30px;
     padding: 4px 14px;
@@ -1649,6 +1649,10 @@ h6 {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     border-radius: 3px;
+}
+
+.mh-home .mh-header-info .social-icon li .fa-v {
+    width: 45px;
 }
 
 .mh-home .mh-header-info .social-icon li .fa:hover {
@@ -4328,4 +4332,13 @@ body {
 
 .show-on::-webkit-scrollbar-thumb:hover {
     background: #0aa58b;
+}
+
+.header-bold {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.timeline-description a:hover {
+    color: #0bceaf;
 }

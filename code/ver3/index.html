@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.mourithemes.com/robin/robin/index-particles.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 May 2022 02:02:40 GMT -->
+
+<head>
+    <!--meta tags-->
+    <title> K I E U B A O D U Y </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FAV AND ICONS   -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <!--Animated headline css-->
+    <link rel="stylesheet" href="jquery.animatedheadline.css">
+
+    <!--Theme css-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Responsive css-->
+    <link rel="stylesheet" href="responsive.css">
+
+    <!-- Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--BEGIN LOADING-->
+    <div class="se-pre-con loading-container">
+        <div class="cssload-loader">K I E U B A O D U Y</div>
+    </div>
+    <!--END OF LOADING-->
+
+    <!--Banner area starts-->
+
+    <div class="banner-area" id="home">
+        <div id="particles-js"></div>
+        <div class="banner-table">
+            <div class="banner-table-cell">
+                <div class="welcome-text">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12">
+                                <section class="intro animate-scale">
+
+                                    <div class="img-area">
+                                        <img src="avatar.png" alt="">
+                                        <!--edit image-->
+                                    </div>
+
+                                    <h3>K I E U B A O D U Y</h3>
+                                    <h4>キュウ・バオ・ズイ</h4>
+
+                                    <h1 class="ah-headline">
+
+                                        <span class="ah-words-wrapper">
+                                        <b class="is-visible">Web Developer</b><!--edit the designation if you are in different profession-->
+                                        <b>Bridge Engineer</b> <!--edit the designation if you are in different profession-->
+                                        <b>Project Manager</b> <!--edit the designation if you are in different profession-->
+                                    </span>
+                                    </h1>
+
+                                    <div class="social-icon">
+                                        <ul>
+                                            <li><a href="https://www.facebook.com/" target="_blank" title="Facebook" onclick="alertA()"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                            <li><a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                            <li><a href="https://plus.google.com/" target="_blank" title="Google Plus"><i class="fa-brands fa-google"></i></a></li>
+                                            <li><a href="https://www.pinterest.com/" target="_blank" title="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="info">
+                                        <span id="info"></span>
+                                    </div>
+
+
+
+                                </section>
+
+                                <div class="clearfix"></div>
+
+                                <a class="mouse-scroll hidden-xs dadada" href="#about">
+                                    <span class="mouse">
+                                    <span class="mouse-movement"></span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Latest version JQuery-->
+    <script src="jquery-3.2.1.min.js"></script>
+
+    <!--Bootstrap js-->
+    <script src="bootstrap.min.js"></script>
+
+    <!--Animated headline js-->
+    <script src="jquery.animatedheadline.js"></script>
+
+    <!--particles js-->
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+
+    <!--Main js-->
+    <script>
+        var i = 0;
+        var txt = 'Lorem ipsum typing effect!'; /* The text */
+        var speed = 20; /* The speed/duration of the effect in milliseconds */
+
+        $(window).on('load', function() {
+            function show_popup() {
+                // Animate loader off screen
+                $(".cssload-loader").fadeOut("slow");
+                $(".loading-container").css('display', 'none');
+            };
+            window.setTimeout(show_popup, 2000);
+        });
+
+        //*********** Animated headline js
+
+        $('.animate-scale').animatedHeadline({
+            animationType: 'clip'
+        });
+
+        function alertA() {
+            if (i < txt.length) {
+                document.getElementById("info").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(alertA, speed);
+            }
+        }
+    </script>
+
+</body>
+
+<!-- Mirrored from www.mourithemes.com/robin/robin/index-particles.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 May 2022 02:02:56 GMT -->
+
+</html>

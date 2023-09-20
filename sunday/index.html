@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Sunday-KBD</title>
+</head>
+<body>
+  <!--BEGIN LOADING-->
+  <div class="se-pre-con loading-container" id="pwd-container">
+    <div class="centered-form">
+      <input type="text" placeholder="Nhập password và enter" id="pwd" />
+      <div class="error-message" id="error-message">Sai pass rồi bạn ơi</div>
+    </div>
+  </div>
+<!--END OF LOADING-->
+  <section class="msger">
+    <header class="msger-header">
+      <div class="msger-header-title">
+        <i class="fas fa-comment-alt"></i>SimpleChat
+      </div>
+      <div class="msger-header-options">
+        <span><i class="fas fa-cog"></i></span>
+      </div>
+    </header>
+  
+    <main class="msger-chat">
+      <div class="msg left-msg">
+        <div
+         class="msg-img"
+         style="background-image: url(monday.jpg)"
+        ></div>
+  
+        <div class="msg-bubble">
+          <div class="msg-info">
+            <div class="msg-info-name">Sunday</div>
+            <div class="msg-info-time"></div>
+          </div>
+          <div class="msg-text">
+            Hề lố bấy bì. Mình là AI tập sự. Muốn hỏi gì hỏi đê bạn ei 😄
+          </div>
+        </div>
+      </div>
+      
+    </main>
+  
+    <form class="msger-inputarea">
+      <input type="text" class="msger-input" placeholder="Enter your message...">
+      <button type="submit" class="msger-send-btn">Send</button>
+    </form>
+  </section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="index.js"></script>
+</html>

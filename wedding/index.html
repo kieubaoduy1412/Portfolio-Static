@@ -217,7 +217,25 @@
                 <p><img src="Z-5savethedate_wh.gif" data-bottom-top="@src:Z-5savethedate_wh.gif" height="150" alt=""></p>
                 <h2>28-04-2023</h2>
                 <h3 class="gla_subtitle">Minh Toàn Galaxy</h3>
-                <div class="gla_countdown" data-year="2023" data-month="04" data-day="28"></div>
+                <!-- Count down -->
+                <!-- <div class="gla_countdown" data-year="2023" data-month="04" data-day="28"></div> -->
+                <!-- Count up -->
+                <div class="gla_countdown is-countdown" id="countup1">
+                    <span class="countdown-row countdown-show3">
+                        <span class="countdown-section">
+                            <span class="countdown-amount years">00</span>
+                            <span class="countdown-period">Năm</span>
+                        </span>
+                        <span class="countdown-section">
+                            <span class="countdown-amount months">00</span>
+                            <span class="countdown-period">Tháng</span>
+                        </span>
+                        <span class="countdown-section">
+                            <span class="countdown-amount days">2</span>
+                            <span class="countdown-period">Ngày</span>
+                        </span>
+                    </span>
+                </div>
                 
             </div>
             <!-- container end -->
@@ -1008,6 +1026,88 @@
             }
         });
     });
+
+    window.onload = function() {
+        // Month Day, Year Hour:Minute:Second, id-of-element-container
+        countUpFrom("2023-04-28", 'countup1'); // ****** Change this line!
+    };
+    function countUpFrom(countFrom, id) {
+        startDate  = new Date(countFrom);
+        endDate    = new Date();
+        
+        const startYear = startDate.getFullYear();
+        const february = (startYear % 4 === 0 && startYear % 100 !== 0) || startYear % 400 === 0 ? 29 : 28;
+        const daysInMonth = [31, february, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        let yearDiff = endDate.getFullYear() - startYear;
+        let monthDiff = endDate.getMonth() - startDate.getMonth();
+        if (monthDiff < 0) {
+            yearDiff--;
+            monthDiff += 12;
+        }
+        let dayDiff = endDate.getDate() - startDate.getDate();
+        if (dayDiff < 0) {
+            if (monthDiff > 0) {
+            monthDiff--;
+            } else {
+            yearDiff--;
+            monthDiff = 11;
+            }
+            dayDiff += daysInMonth[startDate.getMonth()];
+        }
+
+        y = yearDiff;
+        M = monthDiff;
+        d = dayDiff;
+
+        console.log(y);
+        console.log(M);
+        console.log(d);
+
+        var idEl = document.getElementById(id);
+        idEl.getElementsByClassName('years')[0].innerHTML = y;
+        idEl.getElementsByClassName('months')[0].innerHTML = M;
+        idEl.getElementsByClassName('days')[0].innerHTML = d;
+
+        clearTimeout(countUpFrom.interval);
+        countUpFrom.interval = setTimeout(function(){ countUpFrom(countFrom, id); }, 1000);
+    }
+
+    // function countUpFromTime(countFrom, id) {
+    //     past  = new Date("2023-04-24");
+    //     now     = new Date();
+    //     // diff    = now - past;
+    //     // console.log(diff)
+        
+
+    //     years  = Math.abs(now.getFullYear() - past.getFullYear());
+    //     months = now.getMonth() - past.getMonth() + 12 * (now.getFullYear() - past.getFullYear())
+    //     days = 
+
+    //     console.log(years)
+    //     console.log(months)
+
+    //     // months = Math.floor( diff / (1000*60*60*24*30) );
+    //     // days   = Math.floor( diff / (1000*60*60*24) );
+    //     // hours  = Math.floor( diff / (1000*60*60) );
+    //     // mins   = Math.floor( diff / (1000*60) );
+    //     // secs   = Math.floor( diff / 1000 );
+
+    //     y = years;
+    //     M = months - years  * 12;
+    //     d = days   - months * 30;
+    //     h = hours  - days   * 24;
+    //     m = mins   - hours  * 60;
+    //     s = secs   - mins   * 60;
+
+    //     var idEl = document.getElementById(id);
+    //     idEl.getElementsByClassName('years')[0].innerHTML = y;
+    //     idEl.getElementsByClassName('months')[0].innerHTML = M;
+    //     idEl.getElementsByClassName('days')[0].innerHTML = d;
+
+    //     clearTimeout(countUpFromTime.interval);
+    //     countUpFromTime.interval = setTimeout(function(){ countUpFromTime(countFrom, id); }, 1000);
+    // }
 </script>
 </body>
 
